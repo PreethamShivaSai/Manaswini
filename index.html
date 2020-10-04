@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INDEX</title>
+	<link rel="stylesheet" type="text/css" href="roverstyle.css">
+	<link rel="stylesheet" type="text/css" href="rover.css">
+</head>
+<body>
+	<div id="header">
+
+			<h1>ROVER RENTALS</h1>
+
+
+		<div class="dropdown">
+
+  			<button class="dropbtn">CHOOSE</button>
+  			<div class="dropdown-content">
+  				<a  href="rover2.html" onclick="rover1()">ROVER1</a>
+  				<a  href="rover2.html" onclick="rover2()">ROVER2</a>
+  				<a  href="rover2.html" onclick="rover3()">ROVER3</a>
+  				<a  href="rover2.html" onclick="rover4()">ROVER4</a>
+  			</div>
+		</div>
+
+	</div>
+		<div id="cont">
+			
+			<h4>TIME TO WANDER!!! </h4>
+			<p>Its time to uncover MARS.</p>
+			<!-- <p>Call us</p> -->
+			<p>Rove around by renting our rover</p>
+			<p>Let us be a part of your amazing journey</p>
+			<p>Offers available only until a limited period..<i>HURRY UP!!!</i></p>
+
+		</div>
+
+		<!-- <div id="container"><img id="main" src="rover1.jpg"></div> -->
+
+
+		<script type="text/javascript">
+			function rover3(){
+
+			if (typeof(Storage) !== "undefined") {
+  
+  			localStorage.setItem("name", "ROVER3");
+  			localStorage.setItem("price","$400");
+  // Retrieve
+  			// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+				}
+				 else {
+  						document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+						}
+
+					}
+
+
+		function rover1(){
+
+
+
+
+			if (typeof(Storage) !== "undefined") {
+  
+  			localStorage.setItem("name", "ROVER1");
+  			localStorage.setItem("price1","80");
+  			localStorage.setItem("price2","120");
+  			localStorage.setItem("price3","200");
+  // Retrieve
+  			// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+				}
+				 else {
+  						document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+						}
+
+		
+
+		}		
+
+
+
+
+
+		function rover2(){
+
+
+
+
+			if (typeof(Storage) !== "undefined") {
+  
+  			localStorage.setItem("name", "ROVER2");
+  			localStorage.setItem("price1","60");
+  			localStorage.setItem("price2","100");
+  			localStorage.setItem("price3","150");
+
+  // Retrieve
+  			// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+				}
+				 else {
+  						document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+						}
+
+		
+
+		}		
+
+
+		function rover3(){
+
+
+
+
+			if (typeof(Storage) !== "undefined") {
+  
+  			localStorage.setItem("name", "ROVER2");
+  			localStorage.setItem("price1","50");
+  			localStorage.setItem("price2","90");
+  			localStorage.setItem("price3","140");
+
+  // Retrieve
+  			// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+				}
+				 else {
+  						document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+						}
+
+		
+
+		}		
+
+
+
+
+
+		function rover4(){
+
+
+
+
+			if (typeof(Storage) !== "undefined") {
+  
+  			localStorage.setItem("name", "ROVER4");
+  			localStorage.setItem("price1","80");
+  			localStorage.setItem("price2","140");
+  			localStorage.setItem("price3","220");
+  // Retrieve
+  			// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+				}
+				 else {
+  						document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+						}
+
+		
+
+		}				
+
+		
+
+			
+		</script>
+</body>
+</html>

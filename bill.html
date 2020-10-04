@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RECEIPT</title>
+	<link rel="stylesheet" type="text/css" href="bill.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	
+
+	<div id="nbill">
+
+	<div id="fbill">
+	<div>	
+	</div>
+	<script type="text/javascript">
+		
+		var date=new Date();
+		var dd=date.getDate();
+		var mm=date.getMonth();
+		var yy=date.getFullYear();
+		var sr=dd+'-'+mm+'-'+yy;
+		var hr=date.getHours();var min=date.getMinutes();sec=date.getSeconds();
+		var time=hr+":"+min+":"+sec;
+		var cost=String(localStorage.getItem("totalcost"));
+		// document.getElementById("p1").innerHTML=cost;
+		var cname=localStorage.getItem("cname");
+		var Rname=localStorage.getItem("name");
+		var addr=localStorage.getItem("addr");
+		var duration=String(localStorage.getItem("dur"));
+		console.log(cname+Rname+duration+cost);
+		// document.getElementById("p1").innerHTML=cost;
+		document.getElementById("fbill").innerHTML="FINAL RECEIPT"+"<br>"+"DATE:"+sr+"<br>"+"TIME"+time+"<br>"+"NAME:"+cname+"<br>"+"MODEL:"+Rname+"<br>"+"DURATION:"+duration+"<br>"+"TOTAL COST:"+cost+"<br>"+"ADDRESS:"+addr;
+
+
+	</script>
+
+</body>
+</html>

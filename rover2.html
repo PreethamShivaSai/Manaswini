@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PRICE DETAILS</title>
+	<link rel="stylesheet" type="text/css" href="rover2.css">
+</head>
+<body>
+	<div id="header"><h2 id='heading'></h2></div>
+	<div id="total">
+			
+			<img id="image" src="mars.jpg">
+			<div id="labelout">
+			<div id='label'>
+			
+			</div>
+			</div>
+	</div>
+	<div id="f">
+	
+  		
+  		
+  		<label for="dur">DURATION IN HRS</label>
+  		<input type="number" id="dur"><br>
+  		<label for="buyername">NAME</label>
+  		<input type="text" id="buyername" ><br>
+  		<label for="addr">PINCODE</label>
+  		<input type="text" id="addr" placeholder="enter a 6-digit number" ><br>
+
+  		<a id="redir" href="#"><button type="button" onclick="myfunc()">CHECK OUT</button></a>
+  		
+  		<br>
+  		
+  		
+	
+	</div >
+	<script type="text/javascript">
+			var name=localStorage.getItem("name");
+			var price1=localStorage.getItem("price1");
+			var price2=localStorage.getItem("price2");
+			var price3=localStorage.getItem("price3");
+			
+
+			if (name=="ROVER1")
+				{
+
+				 document.getElementById("image").src = "rover1.jpg";
+				}
+			else if(name=="ROVER2")
+			{
+				 document.getElementById("image").src = "rover2.jpg";
+			}
+
+			else if(name=="ROVER3")
+			{
+				 document.getElementById("image").src = "rover3.jpg";
+			}
+
+			else if(name=="ROVER4")
+			{
+				 document.getElementById("image").src = "rover4.jpg";
+			}
+
+			document.getElementById("label").innerHTML ="ROVER RENTALS"+"<br>"+
+			"NAME:"+name+"<br>"+"PRICE[ABOVE 8 HOURS]:"+"Rs"+price1+"<br>"+"PRICE[3-7 HRS]:"+"Rs"+price2+"<br>"+
+			"PRICE[1-2 HRS]:"+"Rs"+price3;
+			document.getElementById("heading").innerHTML=name;
+
+
+
+			function myfunc(){
+
+			// var plann=document.getElementById("r").selectedIndex;
+			// var y=document.getElementsByTagName("option")[plann].value;
+			
+
+			var dur=document.getElementById("dur").value;
+			localStorage.setItem("dur",dur);
+			console.log(dur);
+			var d1=Number(dur);
+			
+			if(d1>=8){
+
+				var cost=price1;
+
+			}
+			else if ((3<=d1) &&(d1<8)){
+
+				var cost=price2;
+			}
+			else if(d1<3){
+
+				var cost=price3;
+			}
+			var cos1=Number(cost);
+			var lett=/^[A-Za-z]+$/;
+			var add=document.getElementById("addr").value;
+			localStorage.setItem("addr",add);
+			var n=document.getElementById("buyername").value;
+			var p=/^[\d]+$/;
+			if (dur<=0)  {
+				alert("enter a valid duration");
+				document.getElementById("redir").href="#";
+
+
+			}
+			else if(n==""){
+				alert("enter your name");
+				document.getElementById("redir").href="#";
+
+
+
+			}
+			else if(n.match(lett)==null){
+
+				alert("enter a valid name ");
+				document.getElementById("redir").href="#";
+
+			}
+
+			else if(!(/^\d+$/.test(add))){
+
+				alert("enter a valid pincode ");
+				document.getElementById("redir").href="#";
+
+			}
+
+
+			else if(add.length!=6){
+
+				alert("enter a valid pincode ");
+				document.getElementById("redir").href="#";
+
+			}
+
+
+			else{
+
+
+				document.getElementById("redir").href="bill.html";
+			}
+
+			var totalcost=cos1*d1;
+			console.log(totalcost);
+			
+
+			localStorage.setItem("totalcost", totalcost);
+			var n1=document.getElementById("buyername").value;
+
+			localStorage.setItem("cname",n1);
+
+			}
+
+
+
+			
+			
+		</script>
+		
+		
+		
+		
+</body>
+</html>

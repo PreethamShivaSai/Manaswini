@@ -1,0 +1,131 @@
+*{
+	outline:none;
+}
+
+.div-container{
+	display:grid;
+	grid: 50% 50%/50% 50%;
+	grid-gap: 5px;
+  /*background-color: rgb(93, 137, 137);*/
+  	height: 100vh;
+}
+
+.div-container > div {
+  /*background-color: rgb(209, 224, 224);*/
+
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  overflow: hidden;
+}
+#add{
+
+	font-size: 80%;
+
+}
+
+img{
+	
+	max-height: 80%;
+	max-width: 80%;
+	display: inline-block;
+	float: left;
+}
+#Price{
+	
+display: block ;
+font-size: 80%;
+margin: 0;
+padding: 0;
+
+}
+#name{
+	
+	/*display: block;*/
+	font-size: 80%;
+	font-family:Comic Sans MS, Comic Sans,cursive;
+	margin: 0;
+	padding: 0;
+	padding-top:2%;
+	padding-bottom: 2%;
+}
+.car{
+
+}
+#header{
+
+	text-align: center;
+	align-content: center;
+}
+#cont{
+	display: block;
+	/*height:40%;*/
+	/*width:40%;*/
+	/*height:80%;*/
+	width: 40%;
+	margin: auto;
+	align-items: center;
+	/*background-color: pink;*/
+	text-align: center;
+	font-family: fantasy;
+	font-weight: 100%;
+	font-size: 120%;
+	border-style:solid; 
+	
+	
+
+
+}
+#main{
+	padding-left: 20%;
+	padding-right:20%;
+	max-width: 60%;
+	/*max-height: 20%;*/
+
+}
+
+#f1{
+	width: 40%;
+	margin: auto;
+
+	justify-content: center;
+	align-items: center;
+
+
+}
+button{
+	
+	
+  /*background-color: #008CBA; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;*/
+}
+
+
+#label{
+	padding: 10% 5% 10% 5%;
+	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+	align-content: center;
+	font-size: 25px;
+	font-family: Comic Sans MS, Comic Sans,cursive;
+	background-color: rgb(209, 224, 224);
+
+}
+
+.car:hover{
+
+	/*background-color: #d1d1e0;*/
+	box-shadow: 15px 15px 25px #888888;
+	background-image:linear-gradient(#fdfcfb,#e2d1c3);
+}
+
+
